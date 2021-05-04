@@ -1,0 +1,21 @@
+<%- include("header") %>
+
+    <div class="container-fluid">
+        <h1>Home</h1>
+        <div class="">
+            <%= homeContent %>
+        </div>
+        
+        <!--  -->
+        <% newPost.forEach(post => { %>
+            <h2> <%= post.name %>  </h2>
+            <div class="blog">
+                <p>
+                    <%= post.content %>
+                </p>
+                <a href="post/<%= post._id %>">Read More</a>
+            </div>
+        <% }); %> 
+    </div>
+
+<%- include("footer") %>
